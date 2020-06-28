@@ -12,6 +12,8 @@
     <modules>
         <!-- 子 Module Pay 支付模块 -->
         <module>cloud-provider-payment8001</module>
+        <!-- 子 Module 消费模块 -->
+        <module>cloud-consumer-order80</module>
     </modules>
 
     <!-- 自己添加 Start -->

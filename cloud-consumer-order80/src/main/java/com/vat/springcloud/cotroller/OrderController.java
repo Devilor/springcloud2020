@@ -23,7 +23,7 @@ public class OrderController {
     private RestTemplate restTemplate;
 
     @GetMapping(value = "/consumer/payment/insert")
-    public CommonResult<Payment> insertPayment(Payment payment) {
+    public CommonResult<Integer> insertPayment(Payment payment) {
         log.info("消费者调用服务 ==> insert");
         return restTemplate.postForObject(PAYMENT_URL + "/vat/insertPayment", payment, CommonResult.class);
     }

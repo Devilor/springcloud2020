@@ -14,6 +14,10 @@
         <module>cloud-provider-payment8001</module>
         <!-- 子 Module 消费模块 -->
         <module>cloud-consumer-order80</module>
+        <!-- 公共的代码工具 -->
+        <module>cloud-api-commons</module>
+        <module>cloud-eureka-server7001</module>
+        <module>cloud-eureka-server7002</module>
     </modules>
 
     <!-- 自己添加 Start -->

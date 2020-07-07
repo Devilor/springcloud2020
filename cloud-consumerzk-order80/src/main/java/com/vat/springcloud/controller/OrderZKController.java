@@ -22,6 +22,9 @@ public class OrderZKController {
 
     @GetMapping(value = "/vat/consumer/payment/zk")
     public String paymentInfo() {
+        if (log.isInfoEnabled()) {
+            log.info("Zookeeper...");
+        }
         return restTemplate.getForObject(INVOKE_URL + "/payment/zk", String.class);
     }
 }

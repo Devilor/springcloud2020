@@ -1,5 +1,6 @@
 package com.vat.springcloud.controller;
 
+import ch.qos.logback.core.util.TimeUtil;
 import com.vat.springcloud.entities.CommonResult;
 import com.vat.springcloud.entities.Payment;
 import com.vat.springcloud.service.PaymentService;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @author 东街浊酒づ
@@ -79,4 +81,16 @@ public class PaymentController {
     public String getMyBalanceInfo() {
         return this.serverPort;
     }
+
+    @GetMapping(value = "/vat/feign/timeout")
+    public String paymentFeignTimeout() {
+        try {
+            //暂停几秒钟线程
+            TimeUnit.SECONDS.sleep(3);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return serverPort;
+    }
+
 }

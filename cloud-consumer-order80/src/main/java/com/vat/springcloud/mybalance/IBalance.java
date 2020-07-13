@@ -15,7 +15,7 @@ public interface IBalance {
      * @return
      *
      * @Author:东街浊酒づ
-     * @Desc: 自己手写轮询算法获取 Service 服务
+     * @Desc: 收集所有服务器中 ServerInstance 的实例
      * @Date:2020/7/10 16:48
      */
     ServiceInstance getService(List<ServiceInstance> instanceList);

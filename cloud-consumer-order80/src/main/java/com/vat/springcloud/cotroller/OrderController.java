@@ -58,6 +58,7 @@ public class OrderController {
         ServiceInstance serviceInstance = myBalance.getService(serviceInstanceList);
         URI uri = serviceInstance.getUri();
         System.out.println("URL：" + uri + "/vat/my/bl");
+        //Ribbon 是默认的方式通过调用服务名来达到负载规则实现的和自己自定义的轮询规则相比，而自己的是通过获取到服务名下的所有服务器然后轮询服务器主机的方式实现的
         return restTemplate.getForObject(uri + "/vat/my/bl", String.class);
     }
 }

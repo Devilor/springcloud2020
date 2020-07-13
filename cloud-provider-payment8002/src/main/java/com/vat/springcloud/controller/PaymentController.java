@@ -42,4 +42,14 @@ public class PaymentController {
         }
         return new CommonResult(999, "查询成功！ServerPort:" + serverPort, payment);
     }
+
+    /**
+     * 测试自己手写的负载均衡 Rule
+     *
+     * @return
+     */
+    @GetMapping(value = "/vat/my/bl")
+    public String getMyBalanceInfo() {
+        return this.serverPort;
+    }
 }

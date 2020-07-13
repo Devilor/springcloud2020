@@ -20,8 +20,10 @@ public class ApplicationContextConfig {
      * @return
      */
     @Bean
-    @LoadBalanced
-    public RestTemplate getRestTemplate() {
+    //@LoadBalanced
+    /**
+     *使用自己定制的负载平衡规则，必须去掉 @Balance 注解，否则程序会默认访问 Ribbon 的 RibbonLoadBalancerClient 方法
+     */ public RestTemplate getRestTemplate() {
         return new RestTemplate();
     }
 }
